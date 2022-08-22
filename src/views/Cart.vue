@@ -99,6 +99,8 @@ export default {
         try {
           await axios.post('/api/sendemail', formData).then((response) => {
             this.responseFromCart = response.status
+            // console.log('New: ' + response.status)
+            // console.log('Body: ' + response.body)
           });
           this.btnLabel = 'Re-Order';
           this.showMsg = true;
